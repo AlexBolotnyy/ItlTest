@@ -1,0 +1,19 @@
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="user_table_create" author="bolotyi">
+        <createTable tableName="app_user">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="login" type="varchar(150)" remarks="логин"/>
+            <column name="password" type="varchar(150)" remarks="пароль"/>
+            <column name="role" type="varchar(50)" remarks="роль"/>
+            <column name="name" type="varchar(64)" remarks="имя"/>
+            <column name="second_name" type="varchar(64)" remarks="фамилия"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
